@@ -1,0 +1,10 @@
+server:
+  port: 3333
+
+db:
+  type: postgres
+  port: 5432
+  database: 'easy_tasks'
+
+jwt:
+  expiresIn: 3600
