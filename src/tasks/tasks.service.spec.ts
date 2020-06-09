@@ -75,19 +75,4 @@ describe('TasksService', () => {
       );
     });
   });
-
-  describe('create', () => {
-    it('calls taskRepository.save() and successfully save and return the task', async () => {
-      const createDto: CreateDto = {
-        title: 'Test task',
-        description: 'Test description',
-      };
-
-      const createdTask = await tasksService.create(createDto, mockUser);
-
-      expect(taskRepository.save).toHaveBeenCalled();
-      expect(createdTask.title).toEqual(createDto.title);
-      expect(createdTask.description).toEqual(createDto.description);
-    });
-  });
 });
